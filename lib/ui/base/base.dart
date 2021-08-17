@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BasePage extends StatefulWidget {
+  BasePage({Key key}) : super(key: key);
+
   @override
   BasePageState createState() => BasePageState();
 }
@@ -11,7 +13,7 @@ class BasePage extends StatefulWidget {
 class BasePageState<T extends BasePage> extends State<T> {
 
 
-  final Widget logo=Image.asset("assets/png/logo.png");
+  final Widget logo=Image.asset("assets/png/logo.png",height: 55,width: 201,);
 
   @override
   Widget build(BuildContext context) {

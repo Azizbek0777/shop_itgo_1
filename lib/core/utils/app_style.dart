@@ -12,7 +12,51 @@ letterSpacing: 2,
     fontStyle: FontStyle.normal,
     color: AppColor.black1,
   );
-
+  static TextStyle textStyle2 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 18,
+    fontStyle: FontStyle.normal,
+    color: AppColor.black1,
+  );
+  static TextStyle textStyle3 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+     letterSpacing: 0.5,
+    fontStyle: FontStyle.normal,
+    color: AppColor.grey1,
+  );
+  static TextStyle textStyle4 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    fontStyle: FontStyle.normal,
+    color: AppColor.yellow,
+  );
+  static TextStyle textStyle5 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    fontStyle: FontStyle.normal,
+    color: AppColor.black1,
+  ); static TextStyle textStyle6 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    fontStyle: FontStyle.normal,
+    color: AppColor.grey5,
+  );  static TextStyle textStyle7 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    fontStyle: FontStyle.normal,
+    color: AppColor.yellow,
+  ); static TextStyle textStyle8 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 50,
+    fontStyle: FontStyle.normal,
+    color: AppColor.yellow,
+  );static TextStyle textStyle9= TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 14,
+    fontStyle: FontStyle.normal,
+    color: AppColor.black1,
+  );
   static TextStyle telephoneTextStyle = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 20,
@@ -151,10 +195,10 @@ letterSpacing: 2,
   );
 
   static TextStyle editText = TextStyle(
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w600,
     fontStyle: FontStyle.normal,
-    fontSize: 18,
-    color: AppColor.black,
+    fontSize: 16,
+    color:AppColor.black1,
   );
 
   static TextStyle appbar = TextStyle(
@@ -166,7 +210,7 @@ letterSpacing: 2,
   static TextStyle text = TextStyle(
     fontWeight: FontWeight.w500,
     fontStyle: FontStyle.normal,
-    fontSize: 24,
+    fontSize: 20,
     color: AppColor.black,
   );
 

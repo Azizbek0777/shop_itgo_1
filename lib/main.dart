@@ -42,12 +42,14 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_itgo_1/ui/base/base.dart';
 import 'package:shop_itgo_1/ui/base/route/route_constants.dart';
 import 'package:shop_itgo_1/ui/base/route/routes.dart';
 import 'package:shop_itgo_1/ui/screen/splash/splash_screen.dart';
 
 import 'core/utils/app_color.dart';
+import 'domain/notifier/main_notifier.dart';
 
 void main() {
   runApp(Shop());
@@ -67,30 +69,35 @@ class _ShopState extends BasePageState<Shop> {
   }
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Baraka',
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColor.grey1,
-        primaryColorDark: AppColor.white,
-        primaryColor: AppColor.black1,
-        accentColor: AppColor.grey2,
-        appBarTheme: AppBarTheme(
-          centerTitle: true,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => MainNotifier()),
+
+      ],
+      child: MaterialApp(
+        title: 'Baraka',
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColor.grey1,
+          primaryColorDark: AppColor.white,
+          primaryColor: AppColor.black1,
+          accentColor: AppColor.grey2,
+          appBarTheme: AppBarTheme(
+            centerTitle: true,
+          ),
+          textSelectionTheme:
+              TextSelectionThemeData(selectionHandleColor: AppColor.grey2),
         ),
-        textSelectionTheme:
-            TextSelectionThemeData(selectionHandleColor: AppColor.grey2),
+        debugShowCheckedModeBanner: false,
+        initialRoute: RouteList.initial,
+        onGenerateRoute: (RouteSettings settings) {
+          final routes = Routes.getRoutes(settings); // oldin ham shunday ishlatganmisiz ha shunday
+      final    WidgetBuilder  builder = routes[settings.name];
+          return MaterialPageRoute(
+            builder: builder,
+            settings: settings,
+          );
+        },
       ),
-      debugShowCheckedModeBanner: false,
-      initialRoute: RouteList.initial,
-      onGenerateRoute: (RouteSettings settings) {
-        final routes = Routes.getRoutes(settings); // oldin ham shunday ishlatganmisiz ha shunday
-        WidgetBuilder  builder = routes[settings.name];
-        return MaterialPageRoute(
-          builder: builder,
-        // builder: builder,  // ilgari ishlaganmidi fluter 1 da ishlagan Flutter2 ishlamayabdi ok
-          settings: settings,
-        );
-      },
     );
   }
 }  // null  safety kerakmi?? id olib otish ga kerak bolmaydima bilmadim

@@ -4,9 +4,9 @@ class RouteList {
   static const String initial = '/';
   static const String intro = '/intro';
   static const String verification = '/verification';
-  static const String main = '/main';
-  static const String filter = '/filter';
-  static const String payAccount = '/payAccount';
+  static const String sign_up2 = '/sign_up2';
+  static const String sign_up3 = '/sign_up3';
+  static const String main_page = '/main_page';
   static const String createPoster = '/createPoster';
   static const String tariffsTypeInfo='/tariffsTypeInfo';
   static const String paymentsScreen='/paymentsScreen';

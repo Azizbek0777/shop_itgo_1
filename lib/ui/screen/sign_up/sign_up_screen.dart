@@ -32,69 +32,71 @@ class _SignUpScreenState extends BasePageState<SignUpScreen> {
     return Scaffold(
       backgroundColor: AppColor.white,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            logo,
-            Text(
-              "Ro'yhatdan o'tish uchun telefon raqamingizni kiriting",
-              style: AppStyle.textStyle1,
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 35,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: customMaskTextField(
-                  prefixText: "+998",
-                  keyboardType: TextInputType.number,
-                  controller: _phoneNumberController,
-                  currentFocus: _phoneNumber,
-                  nextFocus: null,
-                  inputAction: TextInputAction.done,
-                  onChanged: (String value) {
-                    if (value.replaceAll(" ", '').length == 9) {
-                      hideKeyboard();
-                    }
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              logo,
+              Text(
+                "Ro'yhatdan o'tish uchun telefon raqamingizni kiriting",
+                style: AppStyle.textStyle1,
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 35,
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 16,left: 16),
+                child: customMaskTextField(
+                    prefixText: "+998",
+                    keyboardType: TextInputType.number,
+                    controller: _phoneNumberController,
+                    currentFocus: _phoneNumber,
+                    nextFocus: null,
+                    inputAction: TextInputAction.done,
+                    onChanged: (String value) {
+                      if (value.replaceAll(" ", '').length == 9) {
+                        hideKeyboard();
+                      }
+                    },
+                    errorText: "Nomer notog'ri",
+                    showError: false,
+                    maskFormatter: maskFormatter,
+                    hintText: "Telefon"),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 16,left: 16),
+                height: 55,
+                width: double.infinity,
+                // ignore: deprecated_member_use
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacementNamed(
+                      RouteList.verification,
+                    );
                   },
-                  errorText: "Nomer notog'ri",
-                  showError: false,
-                  maskFormatter: maskFormatter,
-                  hintText: "Telefon"),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              padding: EdgeInsets.all(8),
-              height: 65,
-              width: double.infinity,
-              // ignore: deprecated_member_use
-              child: FlatButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacementNamed(
-                    RouteList.verification,
-                  );
-                },
-                child: Text(
-                  "Yuborish",
-                  style:
-                      AppStyle.buttonTextStyle.copyWith(color: AppColor.white),
-                  textAlign: TextAlign.center,
-                ),
-                color: AppColor.yellow,
-                textColor: AppColor.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
+                  child: Text(
+                    "Yuborish",
+                    style:
+                        AppStyle.buttonTextStyle.copyWith(color: AppColor.white),
+                    textAlign: TextAlign.center,
+                  ),
+                  color: AppColor.yellow,
+                  textColor: AppColor.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-          ],
+              SizedBox(
+                height: 16,
+              ),
+            ],
+          ),
         ),
       ),
     );
