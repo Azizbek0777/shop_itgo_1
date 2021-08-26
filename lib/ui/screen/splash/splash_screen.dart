@@ -44,11 +44,11 @@ class _SplashScreenState extends BasePageState<SplashScreen> {
       final hasProfile = false;
       if (hasProfile) {
         // Provider.of<CategoryBloc>(context, listen: false).addEvent(GetCategoryEvent());
-        Navigator.of(context).pushReplacementNamed(
+        Navigator.of(context).pushNamed(
           RouteList.verification,
         );
       } else {
-         Navigator.of(context).pushReplacementNamed(RouteList.intro,);
+         Navigator.of(context).pushNamed(RouteList.intro,);
       }
     });
   }

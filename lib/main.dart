@@ -67,12 +67,12 @@ class _ShopState extends BasePageState<Shop> {
 
     // checkLatestVersion(context);
   }
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => MainNotifier()),
-
       ],
       child: MaterialApp(
         title: 'Baraka',
@@ -90,8 +90,8 @@ class _ShopState extends BasePageState<Shop> {
         debugShowCheckedModeBanner: false,
         initialRoute: RouteList.initial,
         onGenerateRoute: (RouteSettings settings) {
-          final routes = Routes.getRoutes(settings); // oldin ham shunday ishlatganmisiz ha shunday
-      final    WidgetBuilder  builder = routes[settings.name];
+          final routes = Routes.getRoutes(settings);
+          final WidgetBuilder builder = routes[settings.name];
           return MaterialPageRoute(
             builder: builder,
             settings: settings,
@@ -100,4 +100,4 @@ class _ShopState extends BasePageState<Shop> {
       ),
     );
   }
-}  // null  safety kerakmi?? id olib otish ga kerak bolmaydima bilmadim
+}

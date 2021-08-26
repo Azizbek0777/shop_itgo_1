@@ -8,6 +8,9 @@ import 'package:shop_itgo_1/ui/page/main/widgets/buttom_navigation.dart';
 import 'package:shop_itgo_1/ui/page/main/widgets/main_arguments.dart';
 import 'package:shop_itgo_1/ui/screen/categorie/categorie_screen.dart';
 import 'package:shop_itgo_1/ui/screen/home/home_screen.dart';
+import 'package:shop_itgo_1/ui/screen/literate/literate_screen.dart';
+import 'package:shop_itgo_1/ui/screen/love/love_screen.dart';
+import 'package:shop_itgo_1/ui/screen/more/more_screen.dart';
 import 'package:shop_itgo_1/ui/screen/sign_up/sign_up_screen.dart';
 import 'package:shop_itgo_1/ui/screen/sign_up_2/sign_up_2_screen.dart';
 import 'package:shop_itgo_1/ui/screen/sign_up_3/sign_up_3_screen.dart';
@@ -52,9 +55,9 @@ class _MainPageState extends BasePageState<MainPage> {
         children: [
           HomeScreen(),
           CategoriesScreen(),
-          SignUpScreen(),
-          SignUp2Screen(),
-          SignUpScreen(),
+          LiterateScreen(),
+          LoveScreen(),
+          MoreScreen(),
 
         ],
 

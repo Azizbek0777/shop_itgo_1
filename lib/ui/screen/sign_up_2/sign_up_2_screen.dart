@@ -117,7 +117,7 @@ class _SignUp2ScreenState extends BasePageState<SignUp2Screen> {
                   // ignore: deprecated_member_use
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed(
+                      Navigator.of(context).pushNamed(
                         RouteList.sign_up3,
                       );
                     },

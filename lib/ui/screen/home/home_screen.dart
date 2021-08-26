@@ -89,11 +89,10 @@ class _HomeScreenState extends BasePageState<HomeScreen> {
             ),
             Container(
               width: double.infinity,
-decoration: BoxDecoration(
-  color: AppColor.yellow
-),
+              decoration: BoxDecoration(color: AppColor.yellow),
               child: Container(
-                margin: EdgeInsets.only(top: 50, bottom: 20, left: 26, right: 26),
+                margin:
+                    EdgeInsets.only(top: 50, bottom: 20, left: 26, right: 26),
                 height: 50,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -105,12 +104,12 @@ decoration: BoxDecoration(
                   },
                   controller: editingController,
                   decoration: InputDecoration(
-
                       labelText: "Search",
                       hintText: "Search",
                       prefixIcon: Icon(Icons.search),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(25.0)))),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(25.0)))),
                 ),
               ),
             ),

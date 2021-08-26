@@ -8,8 +8,7 @@ class AppStyle {
   static TextStyle textStyle1 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 18,
-letterSpacing: 2,
-    fontStyle: FontStyle.normal,
+   fontStyle: FontStyle.normal,
     color: AppColor.black1,
   );
   static TextStyle textStyle2 = TextStyle(
@@ -21,7 +20,7 @@ letterSpacing: 2,
   static TextStyle textStyle3 = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 14,
-     letterSpacing: 0.5,
+
     fontStyle: FontStyle.normal,
     color: AppColor.grey1,
   );
@@ -56,6 +55,55 @@ letterSpacing: 2,
     fontSize: 14,
     fontStyle: FontStyle.normal,
     color: AppColor.black1,
+  );  static TextStyle textStyle10 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    color: AppColor.black1,
+  ); static TextStyle textStyle11 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+    color: AppColor.black1,
+  );static TextStyle textStyle12 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: AppColor.black1,
+  );static TextStyle textStyle13 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    color: AppColor.black1,
+  );  static TextStyle textStyle14 = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+
+    fontStyle: FontStyle.normal,
+    color: AppColor.grey5,
+  );static TextStyle textStyle15 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 12,
+
+    fontStyle: FontStyle.normal,
+    color: AppColor.black1,
+  );static TextStyle textStyle16 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: AppColor.yellow,
+  );static TextStyle textStyle17 = TextStyle(
+    fontWeight: FontWeight.w400,
+    decoration: TextDecoration.lineThrough,
+    fontSize: 18,
+    color: AppColor.grey5,inherit: false
+  );static TextStyle textStyle18 = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 24,
+    color: AppColor.black1,
+  );static TextStyle textStyle19 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: AppColor.grey5,
+  );static TextStyle textStyle20 = TextStyle(
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    color: AppColor.white,
   );
   static TextStyle telephoneTextStyle = TextStyle(
     fontWeight: FontWeight.w400,
@@ -121,7 +169,7 @@ letterSpacing: 2,
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     fontSize: 18,
-    color: AppColor.black,
+    color: AppColor.black1,
   );
   static TextStyle main = TextStyle(
     fontWeight: FontWeight.w500,
@@ -236,10 +284,10 @@ letterSpacing: 2,
   );
   static TextStyle textSpan1 = TextStyle(
     fontWeight: FontWeight.w700,
-    letterSpacing: 0.2,
+
   );
   static TextStyle textSpan2 = TextStyle(
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.2,
+
   );
 }

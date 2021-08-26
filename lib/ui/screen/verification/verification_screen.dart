@@ -149,7 +149,7 @@ class _VerificationScreenState extends BasePageState<VerificationScreen> {
                 // ignore: deprecated_member_use
                 child: FlatButton(
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed(
+                    Navigator.of(context).pushNamed(
                       RouteList.sign_up2,
                     );
                   },

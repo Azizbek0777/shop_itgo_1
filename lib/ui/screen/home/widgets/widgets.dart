@@ -27,8 +27,8 @@ class _ListItemState extends State<ListItem> {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                RouteList.verification,
+              Navigator.of(context).pushNamed(
+                RouteList.product_first,
               );
             },
             child: Column(
