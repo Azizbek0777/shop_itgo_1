@@ -15,6 +15,10 @@ class _MoreScreenState extends State<MoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: AppColor.white,
+        elevation: 0.0,
+      ),
       backgroundColor: AppColor.white,
       body: SafeArea(
         child: Container(
@@ -23,17 +27,13 @@ class _MoreScreenState extends State<MoreScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 10,
-                ),
+
                 Container(
                   height: 57,
                   width: double.infinity,
                   alignment: Alignment.centerLeft,
                   child: TextButton(
-                    // onPressed: () {
-                    //
-                    // },
+                  
                     onPressed: null,
                     child: Container(
                       width: double.infinity,

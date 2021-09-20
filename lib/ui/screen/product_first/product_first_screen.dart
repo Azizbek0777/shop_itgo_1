@@ -156,7 +156,11 @@ class _ProductFirstScreenState extends State<ProductFirstScreen> {
               ),
               // ignore: deprecated_member_use
               child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(RouteList.main_page,arguments: MenuArguments(bottomMenu: BottomMenu.menu_literate, ));
+                  Provider.of<MainNotifier>(context, listen: false).setIndex(3);
+
+                },
                 child: Text(
                   "Savatga qo’shish",
                   style: AppStyle.buttonTextStyle
